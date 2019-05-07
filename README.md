@@ -31,8 +31,9 @@ let func = a => {...};  // parentheses optional with one parameter
 let func = (a, b, c) => {...};  // parentheses required with multiple parameters
 ```
 
+## Template Literals
 
-## Concatenation/String Interpolation
+### Concatenation/String Interpolation
 
 Expressions can be embedded in template literal strings.
 
@@ -47,7 +48,7 @@ let str = `Release Date: ${date}`;
 ```
 
 
-## Multi-line Strings
+### Multi-line Strings
 
 Using template literal syntax, a JavaScript string can span multiple lines without the need for concatenation.
 
