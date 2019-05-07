@@ -12,7 +12,22 @@ ES6 introduced the `const` keyword, which _cannot_ be redeclared or reassigned, 
 
 ```js
 // ES6
-const CONST_IDENTIFIER = 0 // constants are uppercase by convention
+const CONST_IDENTIFIER = 0;  // constants are uppercase by convention
+```
+## Arrow functions
+
+The arrow function expression syntax is a shorter way of creating a function expression. Arrow functions do not have their own `this`, do not have prototypes, cannot be used for constructors, and should not be used as object methods.
+
+```js
+// ES5
+function func(a, b, c) {...};  // function declaration
+var func = function(a, b, c) {...};  // function expression
+```
+
+```js
+// ES6
+let func = a => {...};  // parentheses optional with one parameter
+let func = (a, b, c) => {...};  // parentheses required with multiple parameters
 ```
 
 ## Method Definition Shorthand
@@ -22,20 +37,20 @@ The `function` keyword can be omitted when assigning methods on an object.
 ES5
 ```js
 var obj = {
-  a: function(c, d) {},
-  b: function(e, f) {},
+  a: function(c, d) {...},
+  b: function(e, f) {...},
 }
 ```
 
 ES6
 ```js
 let obj = {
-  a(c, d) {},
-  b(e, f) {},
+  a(c, d) {...},
+  b(e, f) {...},
 }
 ```
 
-Calling method a()
+Calling method `a()`
 ```js
-obj.a() // call method a
+obj.a();  // call method a
 ```
