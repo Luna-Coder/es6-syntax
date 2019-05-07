@@ -36,15 +36,13 @@ let func = (a, b, c) => {...};  // parentheses required with multiple parameters
 
 Expressions can be embedded in template literal strings.
 
-<div class="filename">ES5</div>
-
 ```js
+//ES5
 var str = 'Release date: ' + date
 ```
 
-<div class="filename">ES6</div>
-
 ```js
+//ES6
 let str = `Release Date: ${date}`
 ```
 
@@ -53,15 +51,13 @@ let str = `Release Date: ${date}`
 
 Using template literal syntax, a JavaScript string can span multiple lines without the need for concatenation.
 
-<div class="filename">ES5</div>
-
 ```js
+//ES5
 var str = 'This text ' + 'is on ' + 'multiple lines'
 ```
 
-<div class="filename">ES6</div>
-
 ```js
+//ES6
 let str = `This text
             is on
             multiple lines`
@@ -74,17 +70,15 @@ let str = `This text
 
 The `return` keyword is implied and can be omitted if using arrow functions without a block body.
 
-<div class="filename">ES5</div>
-
 ```js
+//ES5
 function func(a, b, c) {
   return a + b + c
 }
 ```
 
-<div class="filename">ES6</div>
-
 ```js
+//ES6
 let func = (a, b, c) => a + b + c // curly brackets must be omitted
 ```
 
@@ -93,18 +87,16 @@ let func = (a, b, c) => a + b + c // curly brackets must be omitted
 
 ES6 introduces a shorter notation for assigning properties to variables of the same name.
 
-<div class="filename">ES5</div>
-
 ```js
+//ES5
 var obj = {
   a: a,
   b: b,
 }
 ```
 
-<div class="filename">ES6</div>
-
 ```js
+//ES6
 let obj = {
   a,
   b,
@@ -146,17 +138,15 @@ Use curly brackets to assign properties of an object to their own variable.
 var obj = { a: 1, b: 2, c: 3 }
 ```
 
-<div class="filename">ES5</div>
-
 ```js
+//ES5
 var a = obj.a
 var b = obj.b
 var c = obj.c
 ```
 
-<div class="filename">ES6</div>
-
 ```js
+//ES6
 let { a, b, c } = obj
 ```
 
@@ -169,17 +159,15 @@ A more concise syntax has been introduced for iteration through arrays and other
 var arr = ['a', 'b', 'c']
 ```
 
-<div class="filename">ES5</div>
-
 ```js
+//ES5
 for (var i = 0; i < arr.length; i++) {
   console.log(arr[i])
 }
 ```
 
-<div class="filename">ES6</div>
-
 ```js
+//ES6
 for (let i of arr) {
   console.log(i)
 }
@@ -190,26 +178,24 @@ for (let i of arr) {
 
 Functions can be initialized with default parameters, which will be used only if an argument is not invoked through the function.
 
-<div class="filename">ES5</div>
-
 ```js
+//ES5
 var func = function(a, b) {
   b = b === undefined ? 2 : b
   return a + b
 }
 ```
 
-<div class="filename">ES6</div>
-
 ```js
+//ES6
 let func = (a, b = 2) => {
   return a + b
 }
 ```
 
 ```js
-func(10) // returns 12
-func(10, 5) // returns 15
+func(10)  // returns 12
+func(10, 5)  // returns 15
 ```
 
 
@@ -217,9 +203,8 @@ func(10, 5) // returns 15
 
 Spread syntax can be used to expand an array.
 
-<div class="filename">ES6</div>
-
 ```js
+//ES5
 let arr1 = [1, 2, 3]
 let arr2 = ['a', 'b', 'c']
 let arr3 = [...arr1, ...arr2]
@@ -229,9 +214,8 @@ console.log(arr3) // [1, 2, 3, "a", "b", "c"]
 
 Spread syntax can be used for function arguments.
 
-<div class="filename">ES6</div>
-
 ```js
+//ES6
 let arr1 = [1, 2, 3]
 let func = (a, b, c) => a + b + c
 
@@ -243,9 +227,9 @@ console.log(func(...arr1)) // 6
 
 ES6 introducess the `class` syntax on top of the prototype-based constructor function.
 
-<div class="filename">ES5</div>
 
 ```js
+//ES5
 function Func(a, b) {
   this.a = a
   this.b = b
@@ -258,9 +242,8 @@ Func.prototype.getSum = function() {
 var x = new Func(3, 4)
 ```
 
-<div class="filename">ES6</div>
-
 ```js
+//ES6
 class Func {
   constructor(a, b) {
     this.a = a
@@ -284,9 +267,8 @@ x.getSum() // returns 7
 
 The `extends` keyword creates a subclass.
 
-<div class="filename">ES5</div>
-
 ```js
+//ES5
 function Inheritance(a, b, c) {
   Func.call(this, a, b)
 
@@ -301,9 +283,8 @@ Inheritance.prototype.getProduct = function() {
 var y = new Inheritance(3, 4, 5)
 ```
 
-<div class="filename">ES6</div>
-
 ```js
+//ES6
 class Inheritance extends Func {
   constructor(a, b, c) {
     super(a, b)
