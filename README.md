@@ -5,7 +5,7 @@
 | [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) | Block scope    | No       | No                | No                |
 
 
-## Constant declaration
+## Constant Declaration
 
 ES6 introduced the `const` keyword, which _cannot_ be redeclared or reassigned, but _is_ mutable.
 
@@ -15,7 +15,7 @@ const CONST_IDENTIFIER = 0;  // constants are uppercase by convention
 ```
 
 
-## Arrow functions
+## Arrow Functions
 
 The arrow function expression syntax is a shorter way of creating a function expression. Arrow functions do not have their own `this`, do not have prototypes, cannot be used for constructors, and should not be used as object methods.
 
