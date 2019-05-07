@@ -131,7 +131,7 @@ obj.a();  // call method a()
 ```
 
 
-## Destructuring (object matching)
+## Destructuring (Object Matching)
 
 Use curly brackets to assign properties of an object to their own variable.
 
@@ -152,7 +152,7 @@ let { a, b, c } = obj;
 ```
 
 
-## Array iteration (looping)
+## Array Iteration (Looping)
 
 A more concise syntax has been introduced for iteration through arrays and other iterable objects.
 
@@ -175,7 +175,7 @@ for (let i of arr) {
 ```
 
 
-## Default parameters
+## Default Parameters
 
 Functions can be initialized with default parameters, which will be used only if an argument is not invoked through the function.
 
@@ -200,7 +200,7 @@ func(10, 5);  // returns 15
 ```
 
 
-## Spread syntax
+## Spread Syntax
 
 Spread syntax can be used to expand an array.
 
@@ -224,7 +224,7 @@ console.log(func(...arr1));  // 6
 ```
 
 
-## Classes/constructor functions
+## Classes/Constructor Functions
 
 ES6 introducess the `class` syntax on top of the prototype-based constructor function.
 
@@ -324,13 +324,13 @@ let func = a => a + a;
 let obj = {...};
 let x = 0;
 
-export { func, obj, x }
+export { func, obj, x };
 ```
 
 <div class="filename">import.js</div>
 
 ```js
-import { func, obj, x } from './export.js'
+import { func, obj, x } from './export.js';
 
 console.log(func(3), obj, x);
 ```
@@ -373,7 +373,7 @@ let doFirst = new Promise((resolve, reject) => {
   }, 500)
 });
 
-doFirst.then(doSecond)
+doFirst.then(doSecond);
 ```
 
 An example below using `XMLHttpRequest`, for demonstrative purposes only (Fetch API would be the proper modern API to use).
@@ -400,7 +400,7 @@ makeRequest('GET', 'https://url.json', function(err, data) {
   } else {
     console.log(data);
   }
-})
+});
 ```
 
 <div class="filename">ES6 Promise</div>
@@ -423,5 +423,5 @@ makeRequest('GET', 'https://url.json')
   })
   .catch(err => {
     throw new Error(err);
-  })
+  });
 ```
