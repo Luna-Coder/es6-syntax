@@ -194,6 +194,7 @@ let func = (a, b = 2) => {
 }
 ```
 
+Calling the `func()` function 
 ```js
 func(10);  // returns 12
 func(10, 5);  // returns 15
@@ -259,6 +260,7 @@ class Func {
 let x = new Func(3, 4);
 ```
 
+Calling the `getSum()` method
 ```js
 x.getSum();  // returns 7
 ```
@@ -301,6 +303,7 @@ class Inheritance extends Func {
 let y = new Inheritance(3, 4, 5);
 ```
 
+Calling the `getProduct()` method         
 ```js
 y.getProduct();  // 60
 ```
