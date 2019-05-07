@@ -1,5 +1,3 @@
-# es6-syntax
-
 | Keyword                                                                                       | Scope          | Hoisting | Can Be Reassigned | Can Be Redeclared |
 | --------------------------------------------------------------------------------------------- | -------------- | -------- | ----------------- | ----------------- |
 | [`var`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)     | Function scope | Yes      | Yes               | Yes               |
