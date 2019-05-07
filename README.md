@@ -396,7 +396,7 @@ let doFirst = new Promise((resolve, reject) => {
 doFirst.then(doSecond)
 ```
 
-An example below using `XMLHttpRequest`, for demonstrative purposes only ([Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) would be the proper modern API to use).
+An example below using `XMLHttpRequest`, for demonstrative purposes only (Fetch API would be the proper modern API to use).
 
 <div class="filename">ES5 callback</div>
 
