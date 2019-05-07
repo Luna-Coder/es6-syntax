@@ -313,15 +313,13 @@ y.getProduct();  // 60
 
 Modules can be created to export and import code between files.
 
-<div class="filename">index.html</div>
-
+**index.html File
 ```html
 <script src="export.js"></script>
 <script type="module" src="import.js"></script>
 ```
 
-export.js
-
+**export.js File
 ```js
 let func = a => a + a;
 let obj = {...};
@@ -330,7 +328,7 @@ let x = 0;
 export { func, obj, x };
 ```
 
-<div class="filename">import.js</div>
+**import.js File
 
 ```js
 import { func, obj, x } from './export.js';
@@ -343,9 +341,8 @@ console.log(func(3), obj, x);
 
 Promises represent the completion of an asynchronous function. They can be used as an alternative to chaining functions.
 
-<div class="filename">ES5 callback</div>
-
 ```js
+// ES5 callback
 function doSecond() {
   console.log('Do second.');
 }
@@ -361,9 +358,8 @@ function doFirst(callback) {
 doFirst(doSecond);
 ```
 
-<div class="filename">ES6 Promise</div>
-
 ```js
+// ES6 Promise
 let doSecond = () => {
   console.log('Do second.');
 };
@@ -381,9 +377,8 @@ doFirst.then(doSecond);
 
 An example below using `XMLHttpRequest`, for demonstrative purposes only (Fetch API would be the proper modern API to use).
 
-<div class="filename">ES5 callback</div>
-
 ```js
+// ES5 callback
 function makeRequest(method, url, callback) {
   var request = new XMLHttpRequest();
 
@@ -406,9 +401,8 @@ makeRequest('GET', 'https://url.json', function(err, data) {
 });
 ```
 
-<div class="filename">ES6 Promise</div>
-
 ```js
+// ES6 Promise
 function makeRequest(method, url) {
   return new Promise((resolve, reject) => {
     let request = new XMLHttpRequest();
