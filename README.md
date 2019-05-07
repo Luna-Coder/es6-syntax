@@ -38,12 +38,12 @@ Expressions can be embedded in template literal strings.
 
 ```js
 //ES5
-var str = 'Release date: ' + date
+var str = 'Release date: ' + date;
 ```
 
 ```js
 //ES6
-let str = `Release Date: ${date}`
+let str = `Release Date: ${date}`;
 ```
 
 
@@ -53,14 +53,14 @@ Using template literal syntax, a JavaScript string can span multiple lines witho
 
 ```js
 //ES5
-var str = 'This text ' + 'is on ' + 'multiple lines'
+var str = 'This text ' + 'is on ' + 'multiple lines';
 ```
 
 ```js
 //ES6
 let str = `This text
             is on
-            multiple lines`
+            multiple lines`;
 ```
 
 **Note:** Whitespace is preserved in multi-line template literals.
@@ -73,13 +73,13 @@ The `return` keyword is implied and can be omitted if using arrow functions with
 ```js
 //ES5
 function func(a, b, c) {
-  return a + b + c
+  return a + b + c;
 }
 ```
 
 ```js
 //ES6
-let func = (a, b, c) => a + b + c // curly brackets must be omitted
+let func = (a, b, c) => a + b + c;  // curly brackets must be omitted
 ```
 
 
@@ -92,7 +92,7 @@ ES6 introduces a shorter notation for assigning properties to variables of the s
 var obj = {
   a: a,
   b: b,
-}
+};
 ```
 
 ```js
@@ -100,7 +100,7 @@ var obj = {
 let obj = {
   a,
   b,
-}
+};
 ```
 
 
@@ -113,7 +113,7 @@ The `function` keyword can be omitted when assigning methods on an object.
 var obj = {
   a: function(c, d) {...},
   b: function(e, f) {...},
-}
+};
 ```
 
 ```js
@@ -121,7 +121,7 @@ var obj = {
 let obj = {
   a(c, d) {...},
   b(e, f) {...},
-}
+};
 ```
 
 Calling method `a()`
@@ -135,19 +135,19 @@ obj.a();  // call method a
 Use curly brackets to assign properties of an object to their own variable.
 
 ```js
-var obj = { a: 1, b: 2, c: 3 }
+var obj = { a: 1, b: 2, c: 3 };
 ```
 
 ```js
 //ES5
-var a = obj.a
-var b = obj.b
-var c = obj.c
+var a = obj.a;
+var b = obj.b;
+var c = obj.c;
 ```
 
 ```js
 //ES6
-let { a, b, c } = obj
+let { a, b, c } = obj;
 ```
 
 
@@ -156,20 +156,20 @@ let { a, b, c } = obj
 A more concise syntax has been introduced for iteration through arrays and other iterable objects.
 
 ```js
-var arr = ['a', 'b', 'c']
+var arr = ['a', 'b', 'c'];
 ```
 
 ```js
 //ES5
 for (var i = 0; i < arr.length; i++) {
-  console.log(arr[i])
+  console.log(arr[i]);
 }
 ```
 
 ```js
 //ES6
 for (let i of arr) {
-  console.log(i)
+  console.log(i);
 }
 ```
 
@@ -181,21 +181,21 @@ Functions can be initialized with default parameters, which will be used only if
 ```js
 //ES5
 var func = function(a, b) {
-  b = b === undefined ? 2 : b
-  return a + b
+  b = b === undefined ? 2 : b;
+  return a + b;
 }
 ```
 
 ```js
 //ES6
 let func = (a, b = 2) => {
-  return a + b
+  return a + b;
 }
 ```
 
 ```js
-func(10)  // returns 12
-func(10, 5)  // returns 15
+func(10);  // returns 12
+func(10, 5);  // returns 15
 ```
 
 
@@ -205,21 +205,21 @@ Spread syntax can be used to expand an array.
 
 ```js
 //ES5
-let arr1 = [1, 2, 3]
-let arr2 = ['a', 'b', 'c']
-let arr3 = [...arr1, ...arr2]
+let arr1 = [1, 2, 3];
+let arr2 = ['a', 'b', 'c'];
+let arr3 = [...arr1, ...arr2];
 
-console.log(arr3) // [1, 2, 3, "a", "b", "c"]
+console.log(arr3) // [1, 2, 3, "a", "b", "c"];
 ```
 
 Spread syntax can be used for function arguments.
 
 ```js
 //ES6
-let arr1 = [1, 2, 3]
-let func = (a, b, c) => a + b + c
+let arr1 = [1, 2, 3];
+let func = (a, b, c) => a + b + c;
 
-console.log(func(...arr1)) // 6
+console.log(func(...arr1));  // 6
 ```
 
 
@@ -231,35 +231,35 @@ ES6 introducess the `class` syntax on top of the prototype-based constructor fun
 ```js
 //ES5
 function Func(a, b) {
-  this.a = a
-  this.b = b
+  this.a = a;
+  this.b = b;
 }
 
 Func.prototype.getSum = function() {
-  return this.a + this.b
+  return this.a + this.b;
 }
 
-var x = new Func(3, 4)
+var x = new Func(3, 4);
 ```
 
 ```js
 //ES6
 class Func {
   constructor(a, b) {
-    this.a = a
-    this.b = b
+    this.a = a;
+    this.b = b;
   }
 
   getSum() {
-    return this.a + this.b
+    return this.a + this.b;
   }
 }
 
-let x = new Func(3, 4)
+let x = new Func(3, 4);
 ```
 
 ```js
-x.getSum() // returns 7
+x.getSum();  // returns 7
 ```
 
 
@@ -270,38 +270,38 @@ The `extends` keyword creates a subclass.
 ```js
 //ES5
 function Inheritance(a, b, c) {
-  Func.call(this, a, b)
+  Func.call(this, a, b);
 
-  this.c = c
+  this.c = c;
 }
 
 Inheritance.prototype = Object.create(Func.prototype)
 Inheritance.prototype.getProduct = function() {
-  return this.a * this.b * this.c
+  return this.a * this.b * this.c;
 }
 
-var y = new Inheritance(3, 4, 5)
+var y = new Inheritance(3, 4, 5);
 ```
 
 ```js
 //ES6
 class Inheritance extends Func {
   constructor(a, b, c) {
-    super(a, b)
+    super(a, b);
 
-    this.c = c
+    this.c = c;
   }
 
   getProduct() {
-    return this.a * this.b * this.c
+    return this.a * this.b * this.c;
   }
 }
 
-let y = new Inheritance(3, 4, 5)
+let y = new Inheritance(3, 4, 5);
 ```
 
 ```js
-y.getProduct() // 60
+y.getProduct();  // 60
 ```
 
 
@@ -319,9 +319,9 @@ Modules can be created to export and import code between files.
 export.js
 
 ```js
-let func = a => a + a
-let obj = {}
-let x = 0
+let func = a => a + a;
+let obj = {...};
+let x = 0;
 
 export { func, obj, x }
 ```
@@ -331,7 +331,7 @@ export { func, obj, x }
 ```js
 import { func, obj, x } from './export.js'
 
-console.log(func(3), obj, x)
+console.log(func(3), obj, x);
 ```
 
 
@@ -343,34 +343,34 @@ Promises represent the completion of an asynchronous function. They can be used 
 
 ```js
 function doSecond() {
-  console.log('Do second.')
+  console.log('Do second.');
 }
 
 function doFirst(callback) {
   setTimeout(function() {
-    console.log('Do first.')
+    console.log('Do first.');
 
-    callback()
+    callback();
   }, 500)
 }
 
-doFirst(doSecond)
+doFirst(doSecond);
 ```
 
 <div class="filename">ES6 Promise</div>
 
 ```js
 let doSecond = () => {
-  console.log('Do second.')
-}
+  console.log('Do second.');
+};
 
 let doFirst = new Promise((resolve, reject) => {
   setTimeout(() => {
-    console.log('Do first.')
+    console.log('Do first.');
 
-    resolve()
+    resolve();
   }, 500)
-})
+});
 
 doFirst.then(doSecond)
 ```
@@ -381,23 +381,23 @@ An example below using `XMLHttpRequest`, for demonstrative purposes only (Fetch 
 
 ```js
 function makeRequest(method, url, callback) {
-  var request = new XMLHttpRequest()
+  var request = new XMLHttpRequest();
 
-  request.open(method, url)
+  request.open(method, url);
   request.onload = function() {
     callback(null, request.response)
-  }
+  };
   request.onerror = function() {
     callback(request.response)
-  }
-  request.send()
+  };
+  request.send();
 }
 
 makeRequest('GET', 'https://url.json', function(err, data) {
   if (err) {
-    throw new Error(err)
+    throw new Error(err);
   } else {
-    console.log(data)
+    console.log(data);
   }
 })
 ```
@@ -407,20 +407,20 @@ makeRequest('GET', 'https://url.json', function(err, data) {
 ```js
 function makeRequest(method, url) {
   return new Promise((resolve, reject) => {
-    let request = new XMLHttpRequest()
+    let request = new XMLHttpRequest();
 
-    request.open(method, url)
-    request.onload = resolve
-    request.onerror = reject
-    request.send()
+    request.open(method, url);
+    request.onload = resolve;
+    request.onerror = reject;
+    request.send();
   })
 }
 
 makeRequest('GET', 'https://url.json')
   .then(event => {
-    console.log(event.target.response)
+    console.log(event.target.response);
   })
   .catch(err => {
-    throw new Error(err)
+    throw new Error(err);
   })
 ```
