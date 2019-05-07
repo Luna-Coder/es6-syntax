@@ -194,7 +194,7 @@ let func = (a, b = 2) => {
 }
 ```
 
-Calling the `func()` function 
+Calling the `func()` function with and without default parameters
 ```js
 func(10);  // returns 12
 func(10, 5);  // returns 15
