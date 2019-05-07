@@ -205,7 +205,7 @@ func(10, 5);  // returns 15
 Spread syntax can be used to expand an array.
 
 ```js
-//ES5
+//ES6
 let arr1 = [1, 2, 3];
 let arr2 = ['a', 'b', 'c'];
 let arr3 = [...arr1, ...arr2];
