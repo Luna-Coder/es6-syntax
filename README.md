@@ -54,7 +54,7 @@ Using template literal syntax, a JavaScript string can span multiple lines witho
 
 ```js
 //ES5
-var str = 'This text ' + 'is on ' + 'multiple lines';
+var str = 'This text \n' + 'is on \n' + 'multiple lines';
 ```
 
 ```js
