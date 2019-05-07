@@ -127,7 +127,7 @@ let obj = {
 
 Calling method `a()`
 ```js
-obj.a();  // call method a
+obj.a();  // call method a()
 ```
 
 
